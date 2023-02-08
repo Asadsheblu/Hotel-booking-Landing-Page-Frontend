@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Cfrom from './Components/Cfrom';
+import { Routes,Route } from 'react-router-dom';
+import Cdata from './Components/Cdata';
+import Details from './Components/Details';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+  <>
+  <Routes>
+    <Route path="/" element={<Cfrom/>}></Route>
+    <Route path="/data" element={<Cdata/>}></Route>
+    <Route path="/customer/:Dataid" element={<Details/>}></Route>
+  </Routes>
+  
+  
+  
+  </>
+   
   );
 }
 
